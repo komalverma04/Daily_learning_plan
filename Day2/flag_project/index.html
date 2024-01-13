@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Flag Project</title>
+  <style>
+    /* Write your CSS Code here */
+    body{
+      background-color: aqua;
+    }
+    .flag div {
+      width: 900px;
+      height: 200px;
+      background-color: orangered;
+      position: relative;
+    }
+    .flag div div {
+      width: 900px;
+      height: 200px;
+      background-color: white;
+      position: relative;
+      top: 200px;
+    }
+    .flag div div div {
+      width: 900px;
+      height: 200px;
+      background-color: green;
+      position: relative;
+      top: 200px;
+    }
+    .flag div div div div {
+      width: 196px;
+      height: 196px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: -200px;
+      left: 39%;
+      border: 2px solid blue;
+    }
+    .chakra li {
+      list-style: none;
+      width: 194px;
+      border: 1px solid blue;
+      position: relative;
+    }
+    li:nth-child(1) {
+      top : 97px;
+    }
+    li:nth-child(2) {
+      top : 95px;
+      transform: rotate(90deg);
+    }
+    li:nth-child(3) {
+      top : 93px;
+      transform: rotate(15deg);
+    }
+    li:nth-child(4) {
+      top : 91px;
+      transform: rotate(30deg);
+    }
+    li:nth-child(5) {
+      top : 89px;
+      transform: rotate(45deg);
+    }
+    li:nth-child(6) {
+      top : 87px;
+      transform: rotate(60deg);
+    }
+    li:nth-child(7) {
+      top : 85px;
+      transform: rotate(75deg);
+    }
+    li:nth-child(8) {
+      top : 83px;
+      transform: rotate(105deg);
+    }
+    li:nth-child(9) {
+      top : 81px;
+      transform: rotate(120deg);
+    }
+    li:nth-child(10) {
+      top : 79px;
+      transform: rotate(135deg);
+    }
+    li:nth-child(11) {
+      top : 77px;
+      transform: rotate(150deg);
+    }
+    li:nth-child(12) {
+      top : 75px;
+      transform: rotate(165deg);
+    }
+    
+
+  </style>
+</head>
+
+<body>
+  <div class="flag">
+    <div>
+      <div>
+        <div>
+          <div class="chakra">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
