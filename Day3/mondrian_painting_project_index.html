@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0px;
+      padding: 0px;
+    }
+    .container {
+      background-color: #000;
+      height: 748px;
+      width: 748px;
+      display:grid;
+      gap: 9px;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 20px;
+    }
+    .red {
+      background-color: red;
+      grid-area: 1/1/2/2;
+    }
+    .green {
+      background-color: lightgreen;
+      grid-area: 1/2/2/5;
+    }
+    .offwhite {
+      background-color: whitesmoke;
+      grid-area: 2/1/4/2;
+    }
+    .sea {
+      background-color: seashell;
+      grid-area: 2/2/4/4;
+    }
+    .blue {
+      background-color: blue;
+      grid-area: 2/4/3/5;
+      border-bottom: 10px solid #000;
+    }
+    .white {
+      background-color: white;
+      grid-area: 4/1/5/2;
+    }
+    .yellow {
+      background-color: yellow;
+      grid-area: 4/2/5/3;
+    }
+    .black {
+      background-color: lightslategray;
+      grid-area: 4/3/5/4;
+    }
+    .pink {
+      background-color: palevioletred;
+      grid-area: 3/4/5/5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="offwhite"></div>
+    <div class="sea"></div>
+    <div class="blue"></div>
+    <div class="pink"></div>
+    <div class="white"></div>
+    <div class="yellow"></div>
+    <div class="black"></div>
+  </div>
+</body>
+
+</html>
