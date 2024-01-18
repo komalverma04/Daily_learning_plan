@@ -1,0 +1,79 @@
+
+.top-container {
+    background-color: #F0EDCF;
+    height: 100vh;
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+}
+.bio-image{
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    background-color: #F0EDCF;
+    float: right;
+    margin-top: 80px;
+    margin-right: 30px;
+    border: #0B60B0 30px solid;
+}
+.bio-image img{
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading {
+    position: absolute;
+    margin-top: 100px;
+}
+.heading h1{
+    color: #40A2D8;
+    font-size: 5.625rem;
+    margin: 50px auto 0 auto;
+    font-family: "Sacramento", cursive;
+}
+.heading h2{
+    color: #0B60B0;
+    font-size: 5.625rem;
+    margin: 50px auto 0 auto;
+    font-family: "Sacramento", cursive;
+}
+.Mid-Container {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 40px;
+    background-color: #F0EDCF;
+}
+.Mid-Container .education {
+margin-left: 80px;
+background-color: #40A2D8;
+grid-area: 1/1/2/2;
+border-radius: 50px;
+}
+.Mid-Container .my_skills {
+margin-right: 80px;
+background-color: #40A2D8;
+grid-area: 1/2/2/3;
+border-radius: 50px;
+}
+.Mid-Container.education > h2 , .Mid-Container.education > h3 {
+    font-family: "Sacramento", cursive;
+    
+    color: black; 
+    text-align: center;
+}
+.education{
+    text-align: center;
+    font-size: 1.5em;
+}
+.Highlight {
+    color: #280274; 
+    font-size: 4.5rem;
+    text-align: center;
+}
+
