@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS tags</title>
+</head>
+<body>
+    <h1>Hello, Myself Komal </h1>
+   <p>Current Second: <%= second %>.</p>
+   <% if(second % 2 === 0){ %>
+    <ul>
+        <%for(let item = 0;item < items.length;item++){ %>
+            <li><%= items[item]%></li>
+        <% } %>
+    </ul>
+   <%}else{%>
+    <p>Nothing to display.</p>
+  <% } %>
+  <p><%- htmlcontent %></p>
+   <p><%- include("footer.ejs") %></p>
+
+
+
+</body>
+</html>
