@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Passing</title>
+</head>
+<body>
+
+   <% if(locals.lengthofname){ %>
+        <h1>Your name has <%= lengthofname %> letters!!</h1>
+   <% }else{%>
+    <h1>Enter your name below</h1>
+    <% }%>
+    <form action="/submit" method="POST">
+        <input type="text" name="fname" placeholder="First Name">
+        <input type="text" name="lname" placeholder="Last Name">
+        <input type="submit" value="OK">
+    </form>
+</body>
+</html>
