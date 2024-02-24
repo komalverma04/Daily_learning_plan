@@ -1,0 +1,28 @@
+Web Authentication: As users gonna use our website they generate data on websites
+In order to associate those peices of data with particular user we need authentication
+Create an account for each user. 
+Restrict access to certain parts of the website.
+There are different levels of security
+PostgreSQL is best relational database, free, opensource, vast community
+pg is a npm package which enable us set up and run the postgreSQL in our node backened
+postgres database is a server at its own.
+we have to install two peices of software 1. Postgres server: it actually goes to stand up the postgres server on our localhost
+2. pgAdmin : ui for us to tap into our db 
+It has tables with many feilds and many rows.
+CREATE TABLE freinds (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(50),
+	age INT,
+	is_cool BOOLEAN
+
+);
+VARCHAR(50)is more efficient than char(50), TEXT does not take a maxaimum limit
+so TEXT is few slow but in modern era TEXT is being used and also it handles UTF-8 better
+Microsoft Windows does not natively display the images of flags and you won't see 
+flags in VS Code or pgAdmin.
+CSV: comma separated languages where each record is separated by comma
+it has header which has column name separated by commas
+A csv file can easily be converted to postgresSQL table by importing csv file into postgres database , we need 
+to care that header is on in pgAdmin as header of csv file contains name of columns not the real data. Name and number
+ of columns should be same as csv as in postgres table.
+An emoji has a datatype of UTF-8, it is stored as text when computer recognises the text it pickups the image a
