@@ -1,0 +1,77 @@
+Web Authentication: As users gonna use our website they generate data on websites
+In order to associate those peices of data with particular user we need authentication
+Create an account for each user. 
+Restrict access to certain parts of the website.
+There are different levels of security
+PostgreSQL is best relational database, free, opensource, vast community
+pg is a npm package which enable us set up and run the postgreSQL in our node backened
+postgres database is a server at its own.
+we have to install two peices of software 1. Postgres server: it actually goes to stand up the postgres server on our localhost
+2. pgAdmin : ui for us to tap into our db 
+It has tables with many feilds and many rows.
+CREATE TABLE freinds (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(50),
+	age INT,
+	is_cool BOOLEAN
+
+);
+VARCHAR(50)is more efficient than char(50), TEXT does not take a maxaimum limit
+so TEXT is few slow but in modern era TEXT is being used and also it handles UTF-8 better
+Microsoft Windows does not natively display the images of flags and you won't see 
+flags in VS Code or pgAdmin.
+CSV: comma separated languages where each record is separated by comma
+it has header which has column name separated by commas
+A csv file can easily be converted to postgresSQL table by importing csv file into postgres database , we need 
+to care that header is on in pgAdmin as header of csv file contains name of columns not the real data. Name and number
+ of columns should be same as csv as in postgres table.
+An emoji has a datatype of UTF-8, it is stored as text when computer recognises the text it pickups the image and show it
+1. SELECT * FROM <TABLE>;
+2. SELECT <COLUMN> FROM <TABLE>; or SELECT <COLUMN>,<COLUMN> FROM <TABLE>;
+3. SELECT <COLUMN> FROM <TABLE> WHERE <CONDITION>; ex SELECT country,rice FROM world_foods WHERE rice >= 5;
+4. LIKE PATTERN ex (country names starting from U) SELECT country,rice FROM world_foods WHERE country LIKE 'U' || '%' ; or (country names ending with a) : SELECT country,rice FROM world_foods WHERE country LIKE '%' || 'a' ;
+here || means concatenate not or
+5. INSERT INTO <TABLE> (COLUMN) VALUES (VALUE);
+FEW POINTS TO TAKE CARE WHEN EXECTUING QUERY IN BACKEND (IN NODE JS) : 1. const result = await db.query(
+    "SELECT country_code FROM countries WHERE country_name = $1",
+    [country]
+    ); QUERY VALUES SHOULD ALWAYS BE AN ARRAY
+2. db.end() should not be written before any query otherwise it will give stackerror
+-> Now we should always look for bugs as what if there is no data in the table for corresponding input so we should always put query in try block and catch error in catch block
+********************************************
+RELATIONSHIPS: 
+1. ONE to ONE relationship: Two tables are connected thorugh one column 
+for ex : 
+CREATE TABLE student (
+id SERIAL PRIMARY KEY,
+first_name TEXT,
+last_name TEXT );
+CREATE TABLE contact_detail (
+id INTEGER REFERENCES student(id) UNIQUE,
+tel TEXT,
+address TEXT );
+SELECT * FROM student JOIN contact_detail ON student.id = contact_detail.id;
+
+2. ONE TO MANY:
+when one record in a table has many data or records for ex: each student makes many homework submissions, a customer makes many orders
+
+3. MANY TO ONE: point of view, 
+
+4. MANY TO MANY: a student can enroll in many subjects and one subject can have many students. this type of relationsip is many to many and it can be shown by making a new third table
+For ex: Table student has student_id,student name, student phone and Table subject has subject_id and subject_name and The third ENROLLMENT table which shows the relationship
+will have student_id and subject_id. RECORD'S example are (1,1),(1,3),(1,5),(2,3),(2,5),(3,1)
+
+ALIASES : AS is used to shorten our queries and to rename the output feilds, AS keyword is completely optional :
+SELECT s.id AS id, first_name, last_name, title
+FROM enrollment AS e
+JOIN student AS s ON s.id = e.student_id
+JOIN class AS c ON c.id = e.class_id;
+ 
+TO 
+
+SELECT s.id AS id, first_name, last_name, title
+FROM enrollment e
+JOIN student s ON s.id = e.student_id
+JOIN class c ON c.id = e.class_id;
+
+
