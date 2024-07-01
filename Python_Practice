@@ -1,0 +1,858 @@
+import math
+import pyttsx3
+# print(math.sqrt(25))
+engine = pyttsx3.init()
+# engine.say("You will be a successful women")
+# engine.runAndWait()
+# voices = engine.getProperty('voices')       #getting details of current voice
+# engine.setProperty('voice', voices[0].id) 
+# engine.say("You will be a successful women") 
+# engine.runAndWait() #changing index, changes voices. o for male
+# engine.setProperty('voice', voices[1].id)  
+# engine.say("You will be a successful women")
+# engine.runAndWait()
+
+#Import os Library
+# import os
+
+# #print all entries in current directory
+# print (os.listdir("/Document"))
+# logical operators
+# e = True and False
+# print(e)
+# print(not(True))
+
+#TYpecasting
+# a = "5.6"
+# a = float(a)
+# t = type(a)
+# print(t)
+
+# string concatenation
+# a = input("enter number1")
+# b = input("enter number2")
+# print(a+b)
+
+# arithmetic operators
+# a = int(input("enter number1"))
+# b = int(input("enter number2"))
+# print(a > b)
+
+#square of a = a**a
+# name = input("enter your name")
+# print(f"My name is {name}" )
+# date = "1/1/2001"
+# letter = f"Dear {name}, \nYou'  re selected!!\n{date}"
+# letter string is not changed, string is not immutable replace created a new string and printed
+# print(letter.replace("  ",""))
+
+# list is a container to store different data types
+# string is immutable but list is mutable
+# List function does not create new list it works on original list
+# l1 = [1,67,34,33,6,23]
+
+# tuple is a container to store different data types
+# tuple is immutable but list is mutable
+# a = (1,)
+# a is a tuple
+# fruits = []
+# f1 = input("enter name of fruit")
+# fruits.append(f1)
+# f1 = input("enter name of fruit")
+# fruits.append(f1)
+# f1 = input("enter name of fruit")
+# fruits.append(f1)
+# f1 = input("enter name of fruit")
+# fruits.append(f1)
+# f1 = input("enter name of fruit")
+# fruits.append(f1)
+# f1 = input("enter name of fruit")
+# fruits.append(f1)
+# f1 = input("enter name of fruit")
+# fruits.append(f1)
+# print(fruits)
+
+# marks = [45,56,434,65,343,67]
+# marks.sort()
+# print(marks)
+
+# t = (3,62,6,0,5,0,0,0)
+# print(t.count(0))
+
+#Dictionary = {ordered, mutable, indexed, unique}
+# marks = {
+#     "Komal": 100,
+#     "neha": 98,
+#     "rounak": 98
+# }
+# print(marks["neha"]) #time: O(1)
+#methods
+# print(marks.items())
+# print(marks.keys())
+# print(marks.values())
+# marks.update({"rounak": 99})
+# print(marks)
+# print(marks.get("neha"))
+# print(marks["neha"]) #same output
+# print(marks.get("neha2"))#no error it'll give null
+# print(marks["neha2"]) #error
+#d = {} empty dictionary
+#e = set(): empty set
+
+#set is a collection of well defined immutable unindexed unordered unique objects
+# s = {1,4,5,7,8,8,8,8}
+# print(s, type(s))
+
+#methods o0f sets
+# s.add(9)
+# print(s)
+#print(len(s))
+# s.remove(8)
+# print(s)
+# ss = {34,534,6,3,7,9}
+# print(s.intersection(ss))
+
+# words = {
+#     "kutta": "dog",
+#     "billi": "cat",
+#     "chuha": "rat"
+# }
+# word = input("shabd bataiye")
+# print(words[word])
+
+# num = set()
+# n1 = int(input("enter number"))
+# num.add(n1)
+
+# n1 = int(input("enter number"))
+# num.add(n1)
+
+# n1 = int(input("enter number"))
+# num.add(n1)
+
+# n1 = int(input("enter number"))
+# num.add(n1)
+
+# n1 = int(input("enter number"))
+# num.add(n1)
+
+# n1 = int(input("enter number"))
+# num.add(n1)
+# print(num)
+
+# s = set()
+# s.add(8)
+# s.add("8")
+# print(s)
+
+# s = set()
+# s.add(8)
+# s.add("8")
+# s.add(8.0)
+# print(s) set has 8 and'8' as in python 8==8.0 is true as they are numerically equal
+
+# a = int(input("enter"))
+# if(a>=18):
+#     print("adult")
+# elif(a < 0):
+#     print("invalid")
+# else:
+#     print("child")
+
+# num1 = int(input("enter num"))
+# num2 = int(input("enter num"))
+# num3 = int(input("enter num"))
+# num4 = int(input("enter num"))
+# if(num1 > num2 and num1 > num3 and num1>num4):
+#     print(num1)
+# elif(num2 > num1 and num2 > num3 and num2 > num4):
+#     print(num2)
+# elif(num3 > num2 and num3 > num1 and num3>num4):
+#     print(num3)
+# else:
+#     print(num4)
+
+# num1 = int(input("enter marks"))
+# num2 = int(input("enter marks"))
+# num3 = int(input("enter marks"))
+# avg = (num1 + num2 + num3)/3
+# if(avg >= 40 and num1>=33 and num2>=33 and num3>=33):
+#     print("pass")
+# else:
+#     print("fail")
+
+# comment = input("enmter your comment")
+# if(comment.lower().count("buy now")):
+#     print("spam")
+# elif(comment.lower().count("subscribe this")):
+#     print("spam")
+# elif(comment.lower().count("click this")):
+#     print("spam")
+# else:
+#     print("Not a spam ")
+
+# l = ["komal", "neha", "rounak", "sriya"]
+# if("nha" in l):
+#     print("truu")
+# else:
+#     print("fals")
+
+# for i in range(1,6):
+#     print(i)
+# i = 1
+# while(i<6):
+#     print(i)
+#     i += 1
+
+# l = [1,5,9,"my"]
+# i = 0
+# while(i < 4):
+#     print(l[i])
+#     i += 1
+
+
+# for i in range(0,10,2):
+#     print(i)
+
+# s = "Komal"
+# for i in s:
+#     print(i)
+# else:
+#     print("printed")
+
+# for i in range(18): # i will complete this loop afterwards, by using pass python will ignore thi
+#     pass
+# i = 0
+# while(i<3):
+#     print(i)
+#     i += 1
+
+# num = 2
+# for i in range(1,11):
+#     print(f"{num} x {i} = {num *i}")
+
+# l = ["say", "komal", "sjhell", "sajni"]
+# for i in l:
+#     if(i.startswith("s")):
+#         print(f"Good Night {i}")
+
+# num = 2
+# i = 1
+# while(i<11):
+#     print(f"{num} x {i} = {num *i}")
+#     i += 1
+
+# num = int(input("enter the number"))
+# for i in range(2,int(num/2)):
+#     if(num == 2 or num % i == 0):
+#         print("not a prime")
+#         break
+# print("prime")
+
+# n = 10
+# i = 0 
+# sum = 0
+# while(i<=n):
+#     sum += i
+#     i += 1
+# print(sum)
+
+# num = 5
+# fact = 1
+# for i in range(1, num+1):
+#     fact *= i
+#     i += 1
+# print(fact)
+
+# n = 3
+# for i in range(1, n+1):
+#     print(" "*(n-i), end="")
+#     print("*"*(2*i-1), end="")
+#     print(" ")
+
+# n = 3
+# for i in range(1, n+1):
+#     print("*"*(i), end="")
+#     print(" ")
+
+# n = 5
+# for i in range(1, n+1):
+#     if(i == 1 or i == n):
+#         print("*"*(n), end="")
+#     else:
+#         print("*", end="")
+#         print(" "*(n-2), end="")
+#         print("*", end="")
+#     print("")
+# n = 5
+# for i in range(1,11):
+#     print(f"{n} x {11 - i} = {n * (11-i)}")
+
+
+# def greatest(a, b, c):
+#     if(a>b and a>c):
+#         return a
+#     elif(b>a and b>c):
+#         return b
+#     else:
+#         return c
+    
+# print(greatest(8,90,2))
+# print(greatest(3,5,1))
+
+# def ctof(c):
+#     return (9/5)*c+32
+
+# print(ctof(67))
+
+# def sumofn(n):
+#     if(n == 1): return 1
+#     return n + sumofn(n-1)
+
+# print(sumofn(10))
+
+# def pattern(n):
+#     if(n == 0): return 0
+#     print("*"*n)
+#     pattern(n-1)
+
+# pattern(5)
+
+# def inchtocm(cm):
+#     return 2.54 * cm
+# print(inchtocm(45))
+
+# def solve(l,word):
+#     n = []
+#     for item in l:
+#         if(not(item == word)):
+#             n.append(item.split(word))
+#     return n
+
+# l = ["rohan", "mohan", "an", "komal"]
+# print(solve(l,"an"))
+
+# def mtable(n,i):
+#     if(i == 11): return
+#     print(f"{n} x {i} = {n*i}")
+#     mtable(n, i+1)
+
+
+# mtable(5,1)
+
+# #snake, water and gun game
+
+# import random
+# user = input("enter your choice: ")
+# swgDict = {
+#     "s": 1,
+#     "w": -1,
+#     "g": 0
+# }
+# revDict = {
+#     1: "snake",
+#     -1: "water",
+#     0: "gun"
+# }
+# computer = random.choice([-1,0,1])
+
+# print(f"You chose {revDict[swgDict[user]]}")
+# print(f"Computer chose {revDict[computer]}")
+
+# if(computer == swgDict[user]):
+#     print("It's a draw")
+
+# else:
+#     if(computer == -1 and swgDict[user] == 0):
+#         print("You Lose")
+#     elif(computer == -1 and swgDict[user] == 1):
+#         print("You Win")
+#     elif(computer == 1 and swgDict[user] == -1):
+#         print("You Lose")
+#     elif(computer == 1 and swgDict[user] == 0):
+#         print("You Win")
+#     elif(computer == 0 and swgDict[user] == -1):
+#         print("You Win")
+#     elif(computer == 0 and swgDict[user] == 1):
+#         print("You Lose")
+#     else:
+#         print("something went wrong")
+
+# File I/O
+
+# Random access memory: volatile
+# hdd: non volatile
+
+
+# f = open("file.txt")
+# data = f.read()
+# print(data)
+# f.close()
+
+# st = "Komal you will be successful"
+# f = open("Myfile.txt", "w")
+# f.write(st)
+# f.close()
+
+# f = open("Myfile.txt")
+# data = f.readlines()
+# print(data, type(data))
+# f.close()
+
+# f = open("file.txt","a")
+# data = f.read()
+# print(data)
+# f.close()
+
+# #same as
+# with open("file.txt") as f:
+#     print(f.read())
+
+# f= open("poems.txt")
+# data = f.read()
+# if("twinkle" in data):
+#     print("yes")
+
+
+
+# import random
+# def game():
+#     print("you are playing the game")
+#     score = random.randint(1,62)
+#     with open("HighScore.txt") as f:
+#         hiscore = f.read()
+#         if(hiscore != ""):
+#             hiscore = int(hiscore)
+#         else:
+#             hiscore = 0
+#     print("your score is",score)
+#     if(score > hiscore):
+#         with open("HighScore.txt","w") as f:
+#             f.write(str(score))
+#     return score
+# game()
+
+# def generateTable(n):
+#     st = ""
+#     for i in range(1,11):
+#         st += f"{n} x {i} = {n*i}\n"
+#     with open(f"table/table_{n}.txt", "w") as f:
+#             f.write(st)
+
+# for i in range(1, 21):
+#     generateTable(i)
+
+
+# l = ["donkey", "ganda", "bad"]
+# with open("text.txt") as f:
+#     content = f.read()
+
+# for item in l:
+#     content = content.replace(item, "#"*len(item))
+
+# with open("text.txt","w") as f:
+#     f.write(content)
+
+# lineno = 1
+# with open("Myfile.txt") as f:
+#     content = f.readlines()
+
+# for line in content:
+#     if("happy" in line):
+#         print(f"happy is at line {lineno}")
+#         break
+#     lineno += 1
+
+# else:
+#     print("happy is not present")
+
+
+# class employee:
+#     salary = 12000000
+#     language = "python" # class attributes
+
+#     def __init__(self, name, salary, language): # init constructor is a dunder(__init__) method, which is automatically called when an object is created
+#         self.name = name
+#         self.salary = salary
+#         self.language = language
+#         print("object is created")
+
+#     def getInfo(self): # passing self is imp, we can write anything in place of self like this, git anything but we have to pass one argument
+#         print(f"The salary is {self.salary} and language is {self.language}")
+
+#     @staticmethod #now if we donot need any property of object in the function then why pss self object to it, we can mark it as static object
+
+#     def greet():
+#         print("gm")
+
+    
+    
+# komal = employee("Komal Verma", 1200000, "python")
+# print(komal.salary, komal.language, komal.name)
+
+# # komal.language = "JS" # instance attribute, it will take over the class attribute
+# # print(komal.salary, komal.language)
+
+# # #self parameter
+# # komal.getInfo() # is equal to employee.getInfo("komal")
+
+# class Programmer:
+#     company = "Microsoft"
+#     def __init__(self, name, specialisation, salary):
+#         self.name = name
+#         self.specialisation = specialisation
+#         self.salary = salary
+
+# emp1 = Programmer("Komal Verma", "Devops", 1200000)
+
+# class Calculator:
+#     def __init__(self, num):
+#         self.num = num
+#     def square(self):
+#         return self.num*self.num
+#     def cube(self):
+#         return self.num*self.num * self.num
+#     def sqrrt(self):
+#         for i in range(1, int(self.num/2)+1):
+#             if(i*i == self.num):
+#                 return i
+                
+#         else:
+#             print("Not a perfect square")
+
+# n1 = Calculator(4)
+# print(n1.cube())
+# print(n1.sqrrt())
+# print(n1.square())
+
+# class Demo:
+#     a = 4
+
+# o = Demo()
+# print(o.a)# prints class attribute as instance attribute is not set
+# o.a = 0 # instance attribute is set
+# print(o.a)# instance attribute is printed
+# print(Demo.a) # class attribute is printed and is unchanged
+# class TrainTicket:
+#     seats = 0
+#     def __init__(self, name, noofseat) :
+#         self.name = name
+#         self.noofseat = noofseat
+
+#     def bookTicket(self):
+#         TrainTicket.seats += self.noofseat
+#         print("Your ticket is booked!")
+#     @classmethod
+#     def getStatus(cls):
+#         print(f"Out of 100 {cls.seats} are booked")
+
+    
+# t1 = TrainTicket("Komal Khan", 3)
+# t1.bookTicket()
+# t1.getStatus()
+
+# t2 = TrainTicket("Chomal Chan", 3)
+# t2.bookTicket()
+# t2.getStatus()
+
+# #inheritance
+
+# class BusTicket(TrainTicket):
+#     def __init__(self, name, noofseat):
+#         super().__init__(name, noofseat)
+#     def BusNo(self):
+#         print("Bus is 6794")
+
+# b1 = BusTicket("Neha", 9)
+# b1.BusNo()
+# b1.bookTicket()
+# b1.getStatus()
+ 
+
+# class emp:
+#     @property
+#     def name(self):
+#         return f"{self.fname} {self.lname}"
+    
+#     @name.setter
+#     def name(self, value):
+#         self.fname = value.split(" ")[0]
+#         self.lname = value.split(" ")[1]
+
+# e = emp()
+# e.name = "Komal Verma"
+# print(f"{e.fname} {e.lname}")
+
+# -> operator overloading
+# class number:
+#     def __init__(self, num):
+#         self.n = num
+
+#     def __add__(self, num):
+#         return (self.n + num.n)
+    
+# n1 = number(3)
+# n2 = number(4)
+# print(n1 + n2)
+
+# class Twodvector:
+#     def __init__(self, length, breadth):
+#         self.l = length
+#         self.b = breadth
+
+# class Threedvector(Twodvector):
+#     def __init__(self, length, breadth, height):
+#         super().__init__(length, breadth)
+#         self.h = height
+
+# v1 = Twodvector(3,2)
+# print(f"{v1.l} {v1.b}")
+
+# v2 = Threedvector(3,2,8)
+# print(f"{v2.l} {v2.b} {v2.h}")
+
+# class animal:
+#     def __init__(self, sound):
+#         self.sound = sound
+
+#     def nature(self):
+#         print("Object is an animal")
+#     def Make_sound(self):
+#         print(f"makes sound of {self.sound}")
+
+# class pets(animal):
+#     def __init__(self, sound):
+#         super().__init__(sound)
+
+#     def nature(self):
+#         print("object is a pet")
+#         return super().nature() 
+#     def Make_sound(self):
+#         return super().Make_sound()
+    
+# class Dog(pets):
+#     def __init__(self, sound):
+#         super().__init__(sound)
+
+#     def nature(self):
+#         print("object is a dog")
+#         return super().nature()
+#     def Make_sound(self):
+#         return super().Make_sound()
+    
+# d1 = Dog("bark")
+# d1.nature()
+# d1.Make_sound()
+
+# class employee:
+#     def __init__(self, salary, name):
+#         self.name = name
+#         self.salary = salary
+#     def increment(self, inc):
+#         print(f"salary before increment was {self.salary}")
+#         self.salary += inc
+#         print(f"salary after inc is {self.salary}")
+
+# e1 = employee(12000000, "Komal Verma")
+# e1.increment(300000)
+
+# class employee:
+#     salary = 200
+#     increment = 20
+
+#     @property
+#     def salaryafterincrement(self):
+#         return (self.salary + self.salary * (self.increment/100))
+    
+#     @salaryafterincrement.setter
+#     def salaryafterincrement(self,value):
+#         self.increment = ((value/self.salary) - 1) * 100
+
+# e1 = employee()
+# print(e1.salaryafterincrement)
+# e1.salary = e1.salaryafterincrement
+# print(e1.salary)
+# e1.salaryafterincrement = 300
+# print(e1.increment)
+
+# class complex:
+#     def __init__(self, real, img):
+#         self.real = real
+#         self.img = img
+
+#     def __add__(self, c):
+#         c1 = complex(0,0)
+#         c1.real = self.real + c.real
+#         c1.img = self.img + c.img
+#         return c1
+#     def __mul__(self, c):
+#         c1 = complex(0,0)
+#         c1.real = self.real * c.real
+#         c1.img = self.img * c.img
+#         return c1
+#     def __str__(self):
+#         return (f"{self.real} + {self.img}i")
+# c1 = complex(3,4)
+# c2 = complex(5,6)
+# print(c1+c2)
+# print(c1*c2)
+
+#how to increase conveniency in writing python
+#1. walrus operator
+# if(n := len([4,3])) > 3:
+#     print(f"List is too long {n}, expected 3 lenth")
+# else:
+#     print("okays")
+
+#2. typedef: tell python explicitly the datatype so that we can use its all methods
+# a : int = 4
+# name : str = "koal"
+
+# def sum(a : int, b : int) -> int:
+#     return a+b
+
+# #for complex data types
+# from typing import List, tuple, Dict, Union
+# numbers : List[int] = [2,35,6,7,3]
+# person: tuple[str, int] = ("kdj",44)
+# scores: Dict[str, int] = {
+#     "koamol": 200,
+#     "eie": 23
+# }
+# #for variable that can hold multiple types
+# identifier: Union[int,str] = "uiw"
+# identifier = 23
+
+# #3. match case
+
+# def http_status(status):
+#     match status:
+#         case 200:
+#             return "ok"
+#         case 404:
+#             return "not found error"
+#         case 500:
+#             return "internal server eror"
+#         case _:
+#             return "Unknown error"
+        
+# print(http_status(404))
+
+#4. exception handling in py to avoid crashing of code after error
+# try:
+#     num = int(input("enter: "))
+#     print(num)
+# except Exception as e:
+#     print(e)
+
+# #but what if we want to raise an  error so that developer see it and corrects it
+# a = int(input("enter the number"))
+# b = int(input("enter the number"))
+# if(b == 0):
+#     raise ZeroDivisionError("Our program is not meant to divide numbers by zero")
+# else:
+#     print(a/b)
+
+# #try-else: else block will be implemented when try is successful
+# try:
+#     num = int(input("enter: "))
+#     print(num)
+# except Exception as e:
+#     print(e)
+# else:
+#     print("I am in else block")
+
+#5. try-finally: finally block will be implemented when either try is successful or not
+# try:
+#     num = int(input("enter: "))
+#     print(num)
+# except Exception as e:
+#     print(e)
+# finally:
+#     print("I am in finally block")
+
+# but why finally if we can implement it like as below:
+# try:
+#     num = int(input("enter: "))
+#     print(num)
+# except Exception as e:
+#     print(e)
+# print("I am in finally block")
+
+#finally's use case comes in function 
+# def main():
+#     try:
+#         num = int(input("enter: "))
+#         print(num)
+#         return #when we say return then nothng is implemented afer that but even after return finally will be implemented
+
+#     except Exception as e:
+#         print(e)
+#     finally:
+#         print("I am in finally block")
+
+#6. use of __name__ keyword
+#__name__ == __main__ when function is ran directly from the file in which it's present
+#from module import func
+
+#7. use of global variable and global keyword
+
+# a = 89 #global variable
+
+# def func():
+#     a = 3 #local variable
+#     print(a)
+
+# print(a)
+# func()
+# print(a)
+
+# a = 89 #global variable
+
+# def func():
+#     global a #tells python to use global variable
+#     a = 3 # global variable is accessed
+#     print(a)
+
+# print(a)
+# func()
+# print(a)
+
+# 8. enumerate in python
+l = [3,4,2,4,7,8,0]
+# index = 0
+# for item in l:
+#     index += 1
+#     print(f"{item} at index {index}")
+
+# same using enumerate
+# for index, item in enumerate(l):
+#     print(f"{item} at index {index}")
+
+# #9. List comprehensions
+# squaredlist = []
+# # for item in l:
+# #     squaredlist.append(item*item)
+
+
+
+# squaredlist = [i*i for i in l]
+# print(squaredlist)
+# try:
+#     with open("1.txt", "r") as f:
+#         print(f.read())
+# except Exception as e:
+#     print(e)
+# n = 3
+# multiple_table = [i*n for i in range(1,11)]
+# print(multiple_table)
+
+# try:
+#     a = int(input("enter a"))
+#     b = int(input("enter a"))
+#     print(a/b)
+# except ZeroDivisionError as ValueError:
+#     print("ifinite")
+
+#10. virtual environment
+ # same as virtual machines like an isolated environment
